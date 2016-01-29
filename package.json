@@ -1,0 +1,22 @@
+{
+  "name": "cellular-automata-voxel-shader",
+  "version": "1.0.0",
+  "description": "Generate a voxel shader (for MagicaVoxel) from a custom CA rule.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchapelier/cellular-automata-voxel-shader.git"
+  },
+  "author": "Kevin Chapelier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kchapelier/cellular-automata-voxel-shader/issues"
+  },
+  "homepage": "https://github.com/kchapelier/cellular-automata-voxel-shader#readme",
+  "dependencies": {
+    "cellular-automata-rule-parser": "^2.0.0"
+  }
+}
