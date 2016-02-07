@@ -37,7 +37,17 @@ var getNeighbourhood = function getNeighbourhood (neighbourhoodType, neighbourho
     return neighbourhood;
 };
 
-var rule = parser('E 10..32 / 4..10 von-neumann 2'),
+var generate = function generate (ruleString, outOfBoundValue) {
+    var rule = parser(ruleString),
+        neighbourhood;
+
+    if (!rule) {
+        throw Error('Invalid ruleString : "' + ruleString + '"');
+    }
+
     neighbourhood = getNeighbourhood(rule.neighbourhoodType, rule.neighbourhoodRange);
 
-console.log(generateGlsl(rule, neighbourhood, 'wrap'));
+    return generateGlsl(rule, neighbourhood, outOfBoundValue);
+};
+
+module.exports = generate;
