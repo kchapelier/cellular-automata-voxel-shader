@@ -44,14 +44,14 @@ The format of a valid Extended rule is as follow :
 
 **E survivalValues / birthValues neighbourhoodType neighbourhoodRange**
 
-The **survivalValues** defines the counts of alive neighbours necessary for a cell to survive.
-The **birthValues** defines the counts of alive neighbours necessary for a cell to be born.
+The **survivalValues** defines the counts of alive neighbours necessary for a cell to survive (stay at its current alive state).
+The **birthValues** defines the counts of alive neighbours necessary for a cell to be born (change state from dead to alive).
 They are both list of numbers separated by commas (thus allowing number > 9). They can also contains ranges expressed with two dots, also very useful in 3D CA.
 
 For example E 8,10..26 / 8..26 means :
 
-* a cell must be born if it has a number of alive neighbours equals to 8 or somewhere between 10 and 26
-* a cell must survive if it has a number of alive neighbours somewhere between 8 and 26.
+* a cell must survive if it has a number of alive neighbours equals to 8 or somewhere between 10 and 26
+* a cell must be born if it has a number of alive neighbours somewhere between 8 and 26.
 
 The most common **neighbourhoodType** are moore (the default) and von-neumann.
 The **neighbourhoodRange** defines the distance that the neighbourhood covers, its radius. Its default value is 1.
