@@ -5,6 +5,6 @@ var generator = require('./../'),
     ruleString = args[0] || null,
     outOfBoundValue = args[1] || 'wrap';
 
-outOfBoundValue = outOfBoundValue == 'wrap' ? outOfBoundValue : parseInt(outOfBoundValue, 10);
+outOfBoundValue = outOfBoundValue == 'wrap' || outOfBoundValue == 'clamp' ? outOfBoundValue : parseInt(outOfBoundValue, 10);
 
 console.log(generator(ruleString, outOfBoundValue));
