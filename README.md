@@ -20,6 +20,14 @@ cavoxelshader rule outOfBoundValue
 
 Return the code of the shader to stdout.
 
+```bash
+cavoxelshader info [filename]
+```
+
+Extracts the details of a given generated file (rule, outOfBoundValue and version) to stdout.
+
+When used without filename, will list all the files of the current directory with their details to stdout.
+
 ## Examples
 
 ```bash
@@ -66,3 +74,25 @@ The Extended rule format also allows more unconventional neighbourhood types : c
 
 The **out-of-bound value** basically dictates how the cellular automata must deal with cells which are outside of the volume. Its possible values are 0 (out-of-bound values are always considered dead), 1 (out-of-bound values are always considered alive, useful to create CA expanding from the sides to the center), wrap (the cellular automata behave as if the volume was infinitely repeated in space, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be wrapped to [43, 50, 0]) and clamp (the cellular automata get the nearest cell in the volume, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be mapped to [43, 50, 63]).
 
+## Changelog
+
+### 0.3.0 (2016-03-08) :
+
+* Implement the CLI info command.
+
+### 0.2.2 (2016-03-03) :
+
+* Smarter code generation.
+
+### 0.2.0 (2016-03-02) :
+
+* Add doc.
+* Add support for "clamp" out-of-bound value.
+
+### 0.1.0 (2016-02-07) :
+
+* First implementation.
+
+## License
+
+MIT
