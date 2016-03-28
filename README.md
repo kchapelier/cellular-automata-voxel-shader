@@ -56,10 +56,10 @@ The **survivalValues** defines the counts of alive neighbours necessary for a ce
 The **birthValues** defines the counts of alive neighbours necessary for a cell to be born (change state from dead to alive).
 They are both list of numbers separated by commas (thus allowing number > 9). They can also contains ranges expressed with two dots, also very useful in 3D CA.
 
-For example E 8,10..26 / 8..26 means :
+For example "E 8,10..26 / 8..26" means :
 
 * a cell must survive if it has a number of alive neighbours equals to 8 or somewhere between 10 and 26
-* a cell must be born if it has a number of alive neighbours somewhere between 8 and 26.
+* a cell must be born if it has a number of alive neighbours somewhere between 8 and 26
 
 The most common **neighbourhoodType**s are moore (the default) and von-neumann.<br />
 The **neighbourhoodRange** defines the distance that the neighbourhood covers, its radius. Its default value is 1.
@@ -70,11 +70,23 @@ The Wikipedia pages for those neighbourhood include more correct definitions and
 
 The Extended rule format also allows more unconventional neighbourhood types : corner (basically the 8 corners of the moore neighbourhood), edge (the edges of the moore neighbourhood), face (the faces of the moore neighbourdhood) and axis (all the cells directly aligned with one of the current cell's faces).
 
+Finally, it is possible to add a probability to each range and value using a colon notation.
+
+For example "E 8:0.75,10..26 / 8..26:0.95" means :
+
+* a cell might survive if its number of alie neighbours is equal to 8 (probability of 75%)
+* a cell must survive if it has a number of alive neighbours somewhere between 10 and 26
+* a cell might be born if it has a number of alive neighbours somewhere between 8 and 26 (probability of 95%)
+
 ## Out-of-bound value ?
 
 The **out-of-bound value** basically dictates how the cellular automata must deal with cells which are outside of the volume. Its possible values are 0 (out-of-bound values are always considered dead), 1 (out-of-bound values are always considered alive, useful to create CA expanding from the sides to the center), wrap (the cellular automata behave as if the volume was infinitely repeated in space, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be wrapped to [43, 50, 0]) and clamp (the cellular automata get the nearest cell in the volume, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be mapped to [43, 50, 63]).
 
 ## Changelog
+
+### 0.3.1 (2016-03-28) :
+
+* Support stochastic rules (rules with probability).
 
 ### 0.3.0 (2016-03-08) :
 
