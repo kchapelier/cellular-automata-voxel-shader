@@ -2,7 +2,7 @@
 
 Generate a voxel shader (for MagicaVoxel) from a custom CA rule.
 
-![cellular-automata-voxel-shader example](https://github.com/kchapelier/cellular-automata-voxel-shader/raw/master/src/images/voxel-shader1.png "")
+![cellular-automata-voxel-shader example](https://github.com/kchapelier/cellular-automata-voxel-shader/raw/master/images/voxel-shader1.png "")
 
 ## Installing and testing
 
