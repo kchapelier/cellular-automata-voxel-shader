@@ -84,6 +84,11 @@ The **out-of-bound value** basically dictates how the cellular automata must dea
 
 ## Changelog
 
+### 0.3.2 (2016-10-26) :
+
+* Changed the stochastic rule to use iRand (from magicaVoxel 0.98) instead of iFrame.
+* Updated readme with new `xs -n` syntax.
+
 ### 0.3.1 (2016-03-28) :
 
 * Support stochastic rules (rules with probability).
