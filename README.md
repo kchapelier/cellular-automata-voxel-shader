@@ -40,7 +40,7 @@ Here "E 4..6 / 6 von-neumann" is the rule and 0 is the out-of-bound value.
 
 In your console / terminal, go into the shader folder of your MagicaVoxel install and execute **cavoxelshader "E 4..6 / 6 von-neumann" 0 > erode.txt**. This will create a file called erode.txt containing the voxel shader.
 
-Then in MagicaVoxel, load a model (for example monu1 or monu9) and execute **xs erode** in its console to execute it once. You can also execute **xs 5 erode**, to execute it 5 times, etc.
+Then in MagicaVoxel, load a model (for example monu1 or monu9) and execute **xs erode** in its console to execute it once. You can also execute **xs -n 5 erode**, to execute it 5 times, etc.
 
 ## Rule ?
 
