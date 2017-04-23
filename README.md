@@ -101,6 +101,11 @@ Here are a few examples of such rules : `E 0..26 / M`, `E 0..6 / V`, `E 0..32 / 
 This feature should not be executed in conjunction with multi-state rules (Generations, Cyclic R/T/C/N and NLUKY) if you care about correctness.
 
 
+## Examples in the wild
+
+See the [gallery](https://github.com/kchapelier/cellular-automata-voxel-shader/blob/master/GALLERY.md) for several examples.
+
+
 ## Changelog
 
 ### 0.4.0 (2017-04-23) :
