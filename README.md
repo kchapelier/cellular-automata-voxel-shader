@@ -141,6 +141,11 @@ See the [gallery](https://github.com/kchapelier/cellular-automata-voxel-shader/b
 * First implementation.
 
 
+## Contributors
+
+Thanks to Nick Nenov for sharing his implementation of the _colouring single-state rules_ feature.
+
+
 ## License
 
 MIT
