@@ -36,11 +36,13 @@ cavoxelshader "E 4..6 / 6 von-neumann" 0 > erode.txt
 
 Here "E 4..6 / 6 von-neumann" is the rule and 0 is the out-of-bound value.
 
+
 ## General usage
 
 In your console / terminal, go into the shader folder of your MagicaVoxel install and execute **cavoxelshader "E 4..6 / 6 von-neumann" 0 > erode.txt**. This will create a file called erode.txt containing the voxel shader.
 
 Then in MagicaVoxel, load a model (for example monu1 or monu9) and execute **xs erode** in its console to execute it once. You can also execute **xs -n 5 erode**, to execute it 5 times, etc.
+
 
 ## Rule ?
 
@@ -78,11 +80,30 @@ For example "E 8:0.75,10..26 / 8..26:0.95" means :
 * a cell must survive if it has a number of alive neighbours somewhere between 10 and 26
 * a cell might be born if it has a number of alive neighbours somewhere between 8 and 26 (probability of 95%)
 
+
 ## Out-of-bound value ?
 
 The **out-of-bound value** basically dictates how the cellular automata must deal with cells which are outside of the volume. Its possible values are 0 (out-of-bound values are always considered dead), 1 (out-of-bound values are always considered alive, useful to create CA expanding from the sides to the center), wrap (the cellular automata behave as if the volume was infinitely repeated in space, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be wrapped to [43, 50, 0]) and clamp (the cellular automata get the nearest cell in the volume, i.e. in a 64x64x64 volume the cell [43, 50, 64] would be mapped to [43, 50, 63]).
 
+
+## Colouring single-state rules
+
+Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the voxel depending on the number of alive voxels in the neighbourhood at the time of the execution. By default this parameter is set to false, setting it to any value greater than 0 sets it to true.
+
+```
+xs myshader 1
+```
+
+It's possible to apply colors without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges. Here are a few examples of such rules : `E 0..26 / M`, `E 0..6 / V`, `E 0..32 / V 2`, `E 0..12 / axis 2`, ...
+
+Obviously, coloured single-state rules should not be executed in conjunction with multi-state rules (Generations, Cyclic R/T/C/N and NLUKY) if you care about correctness.
+
+
 ## Changelog
+
+### 0.4.0 (2017-04-23) :
+
+* Add support for coloured output with single-state rules.
 
 ### 0.3.2 (2016-10-26) :
 
@@ -109,6 +130,7 @@ The **out-of-bound value** basically dictates how the cellular automata must dea
 ### 0.1.0 (2016-02-07) :
 
 * First implementation.
+
 
 ## License
 
