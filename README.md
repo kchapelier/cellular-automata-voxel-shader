@@ -88,15 +88,15 @@ The **out-of-bound value** basically dictates how the cellular automata must dea
 
 ## Colouring single-state rules
 
-Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the cell depending on the number of alive cells in the neighbourhood at the time of the execution. By default this parameter is set to 0 which disables it. Setting it to a value of 1 enables it, while setting it to a decimal value between 0 and 1 allows to control the number of colors used.
+Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colours to the cell depending on the number of alive cells in the neighbourhood at the time of the execution. By default this parameter is set to 0 which disables it. Setting it to a value of 1 enables it, while setting it to a decimal value between 0 and 1 allows to control the number of colours used.
 
 ```
-xs myshader 0 // no colors
-xs myshader 1 // one color per number of alive cells
-xs myshader 0.25 // less colors, one color per 4 alive cells to be precise
+xs myshader 0 // no colours
+xs myshader 1 // one colour per number of alive cells
+xs myshader 0.25 // less colours, one colour per 4 alive cells to be precise
 ```
 
-It's possible to apply colors without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges.
+It's possible to apply colours without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges.
 
 Here are a few examples of such rules : `E 0..26 / M`, `E 0..6 / V`, `E 0..32 / V 2`, `E 0..12 / axis 2`, ...
 
