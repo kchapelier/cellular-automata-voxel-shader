@@ -1,10 +1,10 @@
 # cellular-automata-voxel-shader
 
-Generate a voxel shader (for MagicaVoxel) from a custom CA rule.
+Generate a voxel shader (for [MagicaVoxel](https://ephtracy.github.io/)) from a custom CA rule.
 
 ![cellular-automata-voxel-shader example](https://github.com/kchapelier/cellular-automata-voxel-shader/raw/master/images/voxel-shader1.png "")
 
-## Installing and testing
+## Installing and updating
 
 With [npm](http://npmjs.org) do:
 
@@ -88,10 +88,12 @@ The **out-of-bound value** basically dictates how the cellular automata must dea
 
 ## Colouring single-state rules
 
-Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the cell depending on the number of alive cells in the neighbourhood at the time of the execution. By default this parameter is set to false, setting it to any value greater than 0 sets it to true.
+Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the cell depending on the number of alive cells in the neighbourhood at the time of the execution. By default this parameter is set to 0 which disables it. Setting it to a value of 1 enables it, while setting it to a decimal value between 0 and 1 allows to control the number of colors used.
 
 ```
-xs myshader 1
+xs myshader 0 // no colors
+xs myshader 1 // one color per number of alive cells
+xs myshader 0.25 // less colors, one color per 4 alive cells to be precise
 ```
 
 It's possible to apply colors without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges.
