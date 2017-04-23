@@ -88,15 +88,17 @@ The **out-of-bound value** basically dictates how the cellular automata must dea
 
 ## Colouring single-state rules
 
-Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the voxel depending on the number of alive voxels in the neighbourhood at the time of the execution. By default this parameter is set to false, setting it to any value greater than 0 sets it to true.
+Single-state rule formats (Extended, Life S/B, and LUKY) accept a single parameter allowing them to assign different colors to the cell depending on the number of alive cells in the neighbourhood at the time of the execution. By default this parameter is set to false, setting it to any value greater than 0 sets it to true.
 
 ```
 xs myshader 1
 ```
 
-It's possible to apply colors without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges. Here are a few examples of such rules : `E 0..26 / M`, `E 0..6 / V`, `E 0..32 / V 2`, `E 0..12 / axis 2`, ...
+It's possible to apply colors without modifying the state of the voxel model by executing a rule which does not do anything (ie. a rule where all cells survives and none are born). This makes it easier to experiment with different neighbourhood types and ranges.
 
-Obviously, coloured single-state rules should not be executed in conjunction with multi-state rules (Generations, Cyclic R/T/C/N and NLUKY) if you care about correctness.
+Here are a few examples of such rules : `E 0..26 / M`, `E 0..6 / V`, `E 0..32 / V 2`, `E 0..12 / axis 2`, ...
+
+This feature should not be executed in conjunction with multi-state rules (Generations, Cyclic R/T/C/N and NLUKY) if you care about correctness.
 
 
 ## Changelog
