@@ -29,5 +29,7 @@ Sorted by person and ordered chronologically.
 * https://twitter.com/NNNenov/status/855454578191609858 (experiments with coloured single-state rules)
 * https://twitter.com/NNNenov/status/855501894084689923 (experiments with coloured single-state rules)
 * https://twitter.com/NNNenov/status/855769402213621763 (experiments with coloured single-state rules)
+* https://twitter.com/NNNenov/status/896113507778740224 (experiments starting with the output of VoxModSynth)
+* https://twitter.com/NNNenov/status/896342141189976064
 
 Feel free to send PRs or ping [me](https://twitter.com/kchplr/) on Twitter to add your own works here.
