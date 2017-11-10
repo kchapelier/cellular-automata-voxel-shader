@@ -32,4 +32,10 @@ Sorted by person and ordered chronologically.
 * https://twitter.com/NNNenov/status/896113507778740224 (experiments starting with the output of VoxModSynth)
 * https://twitter.com/NNNenov/status/896342141189976064
 
+## By zrichz
+
+ * https://twitter.com/farty/status/927212042553036800
+ * https://twitter.com/farty/status/927327177179324416
+ * https://twitter.com/farty/status/927865758566281216
+
 Feel free to send PRs or ping [me](https://twitter.com/kchplr/) on Twitter to add your own works here.
