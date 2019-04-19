@@ -9,6 +9,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "index.js",
+    "cli/",
+    "lib/"
+  ],
+  "keywords": [
+    "automata",
+    "cellular",
+    "magicavoxel"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kchapelier/cellular-automata-voxel-shader.git"
@@ -20,8 +30,8 @@
   },
   "homepage": "https://github.com/kchapelier/cellular-automata-voxel-shader#readme",
   "dependencies": {
-    "cellular-automata-rule-parser": "^2.1.0",
-    "moore": "0.0.2",
+    "cellular-automata-rule-parser": "^3.0.0",
+    "moore": "1.0.0",
     "unconventional-neighbours": "^1.0.0",
     "uniq": "^1.0.1",
     "von-neumann": "^1.0.0"
