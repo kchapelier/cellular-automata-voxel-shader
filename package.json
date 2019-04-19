@@ -1,6 +1,6 @@
 {
   "name": "cellular-automata-voxel-shader",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Generate a voxel shader (for MagicaVoxel) from a custom CA rule.",
   "main": "index.js",
   "bin": {

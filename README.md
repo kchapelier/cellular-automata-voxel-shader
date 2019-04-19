@@ -1,5 +1,7 @@
 # cellular-automata-voxel-shader
 
+[![NPM version](https://badge.fury.io/js/cellular-automata-voxel-shader.svg)](http://badge.fury.io/js/cellular-automata-voxel-shader)
+
 Generate a voxel shader (for [MagicaVoxel](https://ephtracy.github.io/)) from a custom CA rule.
 
 ![cellular-automata-voxel-shader example](https://github.com/kchapelier/cellular-automata-voxel-shader/raw/master/images/voxel-shader1.png "")
@@ -109,6 +111,11 @@ See the [gallery](https://github.com/kchapelier/cellular-automata-voxel-shader/b
 
 
 ## Changelog
+
+### 0.5.0 (2019-04-19) :
+
+* Update dependencies.
+* Drastically reduce the size of the npm package.
 
 ### 0.4.0 (2017-04-23) :
 
